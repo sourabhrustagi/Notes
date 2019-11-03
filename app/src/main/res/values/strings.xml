@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Notes-Arch-Practise</string>
+    <string name="navigation_view_header_title">Todo</string>
+    <string name="list_title">Task List</string>
+    <string name="statistics_title">Statistics</string>
+    <string name="task_marked_complete">Task marked complete</string>
+    <string name="task_marked_active">Task marked active</string>
+    <string name="loading_tasks_error">Error while loading tasks</string>
+    <string name="menu_filter">Filter</string>
+    <string name="menu_clear">Clear Complete</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="label_all">All Tasks</string>
+    <string name="no_tasks_all">You have no tasks!</string>
+    <string name="label_active">Active Tasks</string>
+    <string name="no_tasks_active">You have no active tasks!</string>
+    <string name="label_completed">Completed Tasks</string>
+    <string name="no_tasks_completed">You have no completed tasks!</string>
+    <string name="add_task">New Task</string>
+    <string name="nav_all">All</string>
+    <string name="nav_active">Active</string>
+    <string name="nav_completed">Complete</string>
+    <string name="successfully_saved_task_message">Task saved</string>
+    <string name="successfully_added_task_message">Task Added</string>
+    <string name="successfully_deleted_task_message">Task was deleted</string>
+    <string name="completed_tasks_cleared">Completed tasks cleared</string>
+    <string name="empty_task_message">To Dos cannot be empty</string>
+    <string name="title_hint">Title</string>
+    <string name="description_hint">Enter your description here.</string>
+    <string name="no_data">No data</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="menu_delete_task">Delete task</string>
+    <string name="statistics_no_tasks">You have no tasks.</string>
+    <string name="statistics_active_tasks">Active tasks: %.1f%%</string>
+    <string name="statistics_completed_tasks">Completed tasks: %.1f%%</string>
+</resources>
