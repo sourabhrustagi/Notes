@@ -137,6 +137,9 @@ class DefaultTasksRepository @Inject constructor(
         }
     }
 
+    /**
+     * Relies on [getTasks] to fetch data and picks the task with the same ID.
+     */
     override suspend fun getTask(taskId: String, forceUpdate: Boolean): Result<Task> {
 
         wrapEspressoIdlingResource {
@@ -185,6 +188,7 @@ class DefaultTasksRepository @Inject constructor(
     }
 
     override suspend fun saveTask(task: Task) {
+        // Do in memory cache update to keep the app UI up to date
         cacheAndPerform(task) {
             coroutineScope {
                 launch { tasksRemoteDataSource.saveTask(it) }
@@ -207,7 +211,7 @@ class DefaultTasksRepository @Inject constructor(
     override suspend fun completeTask(taskId: String) {
         withContext(ioDispatcher) {
             getTaskWithId(taskId)?.let {
-                completeTask(taskId)
+                completeTask(it)
             }
         }
     }

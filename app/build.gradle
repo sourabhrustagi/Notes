@@ -25,6 +25,18 @@ android {
         }
     }
 
+    android {
+        sourceSets {
+            String sharedTestDir = 'src/androidTest/java'
+            test {
+                java.srcDir sharedTestDir
+            }
+            androidTest {
+                java.srcDir sharedTestDir
+            }
+        }
+    }
+
     dataBinding {
         enabled = true
         enabledForTests = true

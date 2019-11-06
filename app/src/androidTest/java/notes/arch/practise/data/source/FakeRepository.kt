@@ -18,7 +18,7 @@ class FakeRepository : TasksRepository {
 
     override suspend fun getTask(taskId: String, forceUpdate: Boolean): Result<Task> {
         if (shouldReturnError) {
-            return Result.Error(Exception("Test exception"))
+            return Result.Error(Exception("Test excep tion"))
         }
         tasksServiceData[taskId]?.let {
             return Result.Success(it)

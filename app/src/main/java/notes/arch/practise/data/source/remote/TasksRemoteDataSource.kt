@@ -65,4 +65,12 @@ object TasksRemoteDataSource : TasksDataSource {
     override suspend fun deleteTask(taskId: String) {
         TASKS_SERVICE_DATA.remove(taskId)
     }
+
+    override suspend fun completeTask(taskId: String) {
+        // Empty
+    }
+
+    override suspend fun activateTask(taskId: String) {
+        // Empty
+    }
 }
