@@ -14,16 +14,11 @@ jobs:
       #         name: Chmod permissions #if permission for Gradlew Dependencies fail, use this.
       #         command: sudo chmod +x ./gradlew
       - run:
+          name: Approve license for build tools
+          command: (echo y; echo y; echo y; echo y; echo y; echo y) | /opt/android/sdk/tools/bin/sdkmanager --licenses
+      - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
-      - run:
-          command: |
-            yes | sdkmanager --licenses
-            yes | sdkmanager --update
-          description: |
-            Accepts all Android SDK licenses. This command is typically not necessary to execute, since the CircleCI convenience images ship with all licenses accepted. This command will add approximately 10 seconds to the build time.
-          name: Accept Android Licenses
-          shell: /bin/bash -e
       - save_cache:
           paths:
             - ~/.gradle
